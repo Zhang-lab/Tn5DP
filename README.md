@@ -38,6 +38,67 @@ wget http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/sa
 wget http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/sample_data/cuttag-seq/mm10_igg_2.fastq.gz
 ```
 
+### Run Tn5DP:
+**Step1** Download the singularity image and reference files (you only need download them **ONCE**, then you can use them directly), if there is any update, you may need to download a new image, but reference files are usually **NOT** changed:
+
+1. Download the singularity image:
+```
+wget http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/Tn5DP_v1.0.simg
+```
+
+2. Download the reference files of different genome:
+```
+wget http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/Genome/mm10.tar.gz
+```
+You can also find more genome builds: [click here](http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/Genome/) . Currently we have: mm9/10/39, hg19/38, danRer10/11, rn6 and dm6.
+
+3. Decompress the reference files and put to your own folder:
+```
+tar -zxvf mm10.tar.gz
+```
+
+**Step2** Process data by the singularity image:
+
+**:bangbang:Please run the cmd on the same directory of your data, if your data is on /home/example, then you may need `cd /home/example` first. The location of image and reference files is up to you.**
+```
+singularity run -B ./:/home -B <path-to-parent-folder-of-ref-file>:/cuttag_atac/Resource/Genome <path-to-downloaded-image> \
+-d <ATAC/CUTnTag> -g <hg38/mm10 etc.> -r <PE/SE> -m <narrow/broad> \
+-o <experimental read file1>  -O <experimental read file2> \
+-i  <IgG_control read file1>  -I <IgG_control read file2> \
+-s  <AIAP/MACS2/F-seq/SEACR/HMMRATAC/ChromHMM> \
+--personalize (use this option when using customized peakcalling parameter setting, default is False) \
+--peakcalling options (if you use --personalize option)
+```
+For example, if
+a) you download the image on /home/image/Tn5DP_v1.0.simg
+b) the reference file on /home/src/mm10
+c) and your data type is ATAC-seq data
+d) and experiment data is read1.fastq.gz and read2.fastq.gz on folder /home/data
+e) and input data is igg_1.fastq.gz and igg_2.fastq.gz on folder /home/data
+f) and you want to run the recommended pipeline for ATAC-seq data
+Then you need to:
+1. `cd /home/data`
+2. `singularity run -B ./:/home -B /home/src:/cuttag_atac/Resource/Genome /home/image/Tn5DP_v1.0.simg -d ATAC -g mm10 -r PE -o read1.fastq.gz -O read2.fastq.gz -i igg_1.fastq.gz -I igg_2.fastq.gz -s AIAP`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
