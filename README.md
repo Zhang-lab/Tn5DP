@@ -12,7 +12,7 @@ For any question, please contact [Siyuan Cheng](siyuancheng@wustl.ed):point_left
 <br /> 
 
 ## Documentation
-1. Pipeline documentation: analysis details and QC metrics information<br/>Please [click here](documents/Documentation.md)
+1. Pipeline documentation: analysis details, parameters, and QC metrics information<br/>Please [click here](documents/Documentation.md)
 2. Update logfile: pipeline change record<br/>Please [click here](documents/update_log.md)
 
 <br />
