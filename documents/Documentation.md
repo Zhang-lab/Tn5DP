@@ -9,7 +9,7 @@ ATAC-seq and CUT&Tag-seq data analysis pipeline for Bo Zhang`s lab<br/>Last edit
 <br />
 
 ## 1. Parameters and options
-**1.1 Parameters**<br/>
+### 1.1 Parameters
 `-h`: help information<br/>
 `-d`: data type. *ATAC* for ATAC-seq, *CUTnTag* for CUT&Tag-seq<br/>
 `-g`: genome reference. For now the supported genoms are: <mm39/mm10/mm9/hg19/hg38/danRer10/danRer11/rn6/dm6><br/>
@@ -21,8 +21,12 @@ ATAC-seq and CUT&Tag-seq data analysis pipeline for Bo Zhang`s lab<br/>Last edit
 `-I`: input control read file 2 (only be used when data type is CUT&Tag-seq), must be ended by .fastq or .fastq.gz<br/>
 `-s`: (optional) peak calling software. (default: *AIAP* for ATAC-seq data, *MACS2* for CUT&Tag-seq narrow data, *ChromHMM* for CUT&Tag-seq broad data) <br/>
 &emsp;&emsp; For ATAC-seq data: <AIAP/MACS2/F-seq/HMMRATAC>; for CUT&Tag-seq data: <AIAP/MACS2/F-seq/HMMRATAC/SEACR/ChromHMM><br/>
-`--personalize`: (optional) user-defined parameters for peak calling step
+`-c`: (optional) specify read length minimum cutoff for methylQA filtering, default: 38<br/>
+`-t`: (optional) specify number of threads to use, default: 12<br/>
+`--personalize`: (optional) user-defined parameters for peak calling step, default: FALSE<br/>
+&emsp;&emsp; if user select using personalized peak calling options (just add `--personalize` on command), user need to define **ALL** the optional parameters for peakcalling software, or user need set parameters as **software-defined default** setting)<br/>
 
+### 1.2 Personalized peak calling options
 
 
 
