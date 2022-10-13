@@ -76,7 +76,7 @@ Then you need to:
 1. `cd /home/data`
 2. `singularity run -B ./:/home -B /home/src:/cuttag_atac/Resource/Genome /home/image/Tn5DP_v1.0.simg -d ATAC -g mm10 -r PE -o read1.fastq.gz -O read2.fastq.gz -i igg_1.fastq.gz -I igg_2.fastq.gz -s AIAP`
 
-Note: <br/>for ATAC-seq data, we recommend AIAP for peak calling,<br/>for CUT&Tag-seq narrow marker data, we recommend MACS2 for peak calling,<br/>for CUT&Tag-seq broad marker data, we recommend ChromHMM for peak calling<br/>for the details of **personalized peak calling options**, you can [check here](documents/Documentation.md)
+Note: <br/>for ATAC-seq data, we recommend AIAP for peak calling,<br/>for CUT&Tag-seq narrow marker data, we recommend MACS2 for peak calling,<br/>for CUT&Tag-seq broad marker data, we recommend ChromHMM for peak calling<br/>:point_right:for the details of **personalized peak calling options**, you can [check here](documents/Documentation.md)
 
 **Step3** Differential analysis (if needed)
 
