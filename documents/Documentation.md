@@ -32,12 +32,30 @@ ATAC-seq and CUT&Tag-seq data analysis pipeline for Bo Zhang`s lab<br/>Last edit
 `--nomodel`: --nomodel (Tn5DP default: ATAC--True, CUT&Tag--False; MACS2-default: False)<br/>
 `--shift`: --shift <integer> (Tn5DP default: ATAC--0, CUT&Tag--0; MACS2-default: 0)<br/>
 `--extsize`: --extsize <integer> (Tn5DP default: ATAC--150, CUT&Tag--200; MACS2-default: 200)<br/>
-`qvalue`: -q | --qvalue <0~1> (Tn5DP default: ATAC--0.01, CUT&Tag--0.01; MACS2-default: 0.05)<br/>
+`--qvalue`: -q | --qvalue <0-1> (Tn5DP default: ATAC--0.01, CUT&Tag--0.01; MACS2-default: 0.05)<br/>
 `--callsummits`: --call-summits (Tn5DP default: False; MACS2-default: False)<br/>
 `--broad`: --broad (Tn5DP default: Narrow--False, Broad--True; MACS2-default: False)<br/>
 (Note: --call-summits and --broad could NOT be used at the same time)
   
 **1.2.2 ChromHMM options:** <br/>
+`--binsize`: -b binsize <integer> (Tn5DP default: 200; ChromHMM-default: 200)<br/>
+`--seed`: -s seed <integer> (Tn5DP default: 999; ChromHMM-default: 999)<br/>
+`--foldthresh`: -f foldthresh <0-1> (Tn5DP default: 0; ChromHMM-default: 0)<br/>
+`--poissonthreshold`: -p poissonthreshold <0-1> (Tn5DP default: 0.0001; ChromHMM-default: 0.0001)<br/>
+`--zerotransitionpower`: -z zerotransitionpower <integer> (Tn5DP default: 8; ChromHMM-default: 8)<br/>
+`--init`: -init <information/random/load> (Tn5DP default: information; ChromHMM-default: information)<br/>
+  
+**1.2.3 SEACR options** <br/>
+`--normalize`: normalize step <norm/non> (Tn5DP default: CUT&Tag--norm)<br/>
+`--model`: peakcalling step <relaxed/stringent> (Tn5DP default: CUT&Tag--stringent)<br/>
+  
+**1.2.4 HMMRATAC options**<br/>
+`--upper`: -u <integer> (Tn5DP default: ATAC--35, CUT&Tag--35; HMMRATAC-default: 20)<br/>
+`--lower`: -l <integer> (Tn5DP default: ATAC--2, CUT&Tag--2; HMMRATAC-default: 10)<br/>
+`--blacklist`: -e <blacklist BED file> (Tn5DP default: ATAC--none, CUT&Tag--none; HMMRATAC-default: none)<br/>
+`--score`: --score <max/ave/med/fc/zscore/all> (Tn5DPTn5DP default: ATAC--max, CUT&Tag--max; HMMRATAC-default: max)<br/>
+`--bedgraph`: --bedgraph <True/False> (Tn5DP default: ATAC--True, CUT&Tag--True; HMMRATAC-default: False)<br/>
+
 
 
 
