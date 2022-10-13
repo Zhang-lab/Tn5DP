@@ -56,7 +56,9 @@ ATAC-seq and CUT&Tag-seq data analysis pipeline for Bo Zhang`s lab<br/>Last edit
 `--score`: --score <max/ave/med/fc/zscore/all> (Tn5DPTn5DP default: ATAC--max, CUT&Tag--max; HMMRATAC-default: max)<br/>
 `--bedgraph`: --bedgraph <True/False> (Tn5DP default: ATAC--True, CUT&Tag--True; HMMRATAC-default: False)<br/>
 
+<br />
 
+## 2. Output examples
 
 
 
