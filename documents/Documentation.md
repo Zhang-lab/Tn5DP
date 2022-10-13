@@ -2,13 +2,13 @@
 ATAC-seq and CUT&Tag-seq data analysis pipeline for Bo Zhang`s lab<br/>Last edit: 10/12/2022<br/>For any question please contact: siyuancheng@wustl.edu
 
 **Outline**
-1. Parameters and options
+1. Parameters and personalized peakcalling options
 2. Output example and annotation
 3. Data processing details
 
 <br />
 
-## 1. Parameters and options
+## 1. Parameters and personalized peakcalling options
 ### 1.1 Parameters
 `-h`: help information<br/>
 `-d`: data type. *ATAC* for ATAC-seq, *CUTnTag* for CUT&Tag-seq<br/>
@@ -27,6 +27,17 @@ ATAC-seq and CUT&Tag-seq data analysis pipeline for Bo Zhang`s lab<br/>Last edit
 &emsp;&emsp; if user select using personalized peak calling options (just add `--personalize` on command), user need to define **ALL** the optional parameters for peakcalling software, or user need set parameters as **software-defined default** setting)<br/>
 
 ### 1.2 Personalized peak calling options
+**1.2.1 MACS2 options:**<br/>
+`--keep-dup`: --keep-dup <integer> (Tn5DP default: ATAC--1000, CUT&Tag--1; MACS2-default: 1)<br/>
+`--nomodel`: --nomodel (Tn5DP default: ATAC--True, CUT&Tag--False; MACS2-default: False)<br/>
+`--shift`: --shift <integer> (Tn5DP default: ATAC--0, CUT&Tag--0; MACS2-default: 0)<br/>
+`--extsize`: --extsize <integer> (Tn5DP default: ATAC--150, CUT&Tag--200; MACS2-default: 200)<br/>
+`qvalue`: -q | --qvalue <0~1> (Tn5DP default: ATAC--0.01, CUT&Tag--0.01; MACS2-default: 0.05)<br/>
+`--callsummits`: --call-summits (Tn5DP default: False; MACS2-default: False)<br/>
+`--broad`: --broad (Tn5DP default: Narrow--False, Broad--True; MACS2-default: False)<br/>
+(Note: --call-summits and --broad could NOT be used at the same time)
+  
+**1.2.2 ChromHMM options:** <br/>
 
 
 
