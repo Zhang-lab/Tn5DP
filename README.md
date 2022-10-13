@@ -6,7 +6,7 @@ Current Version: `Tn5DP_v1.0` Last update: `2022.10.12`
 
 Advisor: Bo Zhang<br/>Contributor: Siyuan Cheng
 
-For any question, please contact [Siyuan Cheng](siyuancheng@wustl.ed):point_left:
+For any question, please contact siyuancheng@wustl.edu :point_left:
 
 <br />
 <br /> 
