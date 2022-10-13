@@ -1,0 +1,24 @@
+Bootstrap: localimage
+From: /bar/scheng/benchmark/image_build/singularity_litd/ac_tmp.simg
+
+#IncludeCmd: yes
+
+
+%runscript
+cd /home \
+	&& bash /cuttag_atac/pipe_code/long_options_script.sh  $@
+
+
+%post
+############
+# those parts MUST be used here, can not solve the problem in docker, docker does not has locale issue
+apt-get update && apt-get install -y locales
+locale-gen en_US.UTF-8
+
+apt-get install debconf
+dpkg-reconfigure locales
+############
+
+
+mkdir /scratch
+mkdir -p /cuttag_atac/Resource/Genome
