@@ -14,6 +14,7 @@ For any question, please contact [Siyuan Cheng](siyuancheng@wustl.ed):point_left
 ## Documentation
 1. Pipeline documentation: analysis details, parameters, and QC metrics information<br/>Please [click here](documents/Documentation.md)
 2. Update logfile: pipeline change record<br/>Please [click here](documents/update_log.md)
+3. Check the definition of narrow/broad marker, and mapped-read numbers<br/>Please [click here](https://www.encodeproject.org/chip-seq/histone/)
 
 <br />
 <br />
