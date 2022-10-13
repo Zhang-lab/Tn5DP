@@ -7,10 +7,16 @@ Current Version: `Tn5DP_v1.0` Last update: `2022.10.12`
 Advisor: Bo Zhang<br/>Contributor: Siyuan Cheng
 
 For any question, please contact [Siyuan Cheng](siyuancheng@wustl.ed)
-
-
-
-
-
+<br />
+<br /> 
+<br /> 
 ## Documentation
 1. Pipeline documentation: analysis details and QC metrics information<br/>Please [click here](documents/Documentation.md)
+2. Update logfile: pipeline change record<br/>Please [click here](documents/update_log.md)
+<br />
+<br /> 
+<br />
+## Usage:
+
+
+
