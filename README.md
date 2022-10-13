@@ -69,13 +69,8 @@ singularity run -B ./:/home -B <path-to-parent-folder-of-ref-file>:/cuttag_atac/
 --personalize (use this option when using customized peakcalling parameter setting, default is False) \
 --peakcalling options (if you use --personalize option)
 ```
-For example, if
-a) you download the image on /home/image/Tn5DP_v1.0.simg
-b) the reference file on /home/src/mm10
-c) and your data type is ATAC-seq data
-d) and experiment data is read1.fastq.gz and read2.fastq.gz on folder /home/data
-e) and input data is igg_1.fastq.gz and igg_2.fastq.gz on folder /home/data
-f) and you want to run the recommended pipeline for ATAC-seq data
+For example, if<br/>a) you download the image on /home/image/Tn5DP_v1.0.simg<br/>b) the reference file on /home/src/mm10<br/>c) and your data type is ATAC-seq data<br/>d) and experiment data is read1.fastq.gz and read2.fastq.gz on folder /home/data<br/>e) and input data is igg_1.fastq.gz and igg_2.fastq.gz on folder /home/data<br/>f) and you want to run the recommended pipeline for ATAC-seq data
+
 Then you need to:
 1. `cd /home/data`
 2. `singularity run -B ./:/home -B /home/src:/cuttag_atac/Resource/Genome /home/image/Tn5DP_v1.0.simg -d ATAC -g mm10 -r PE -o read1.fastq.gz -O read2.fastq.gz -i igg_1.fastq.gz -I igg_2.fastq.gz -s AIAP`
