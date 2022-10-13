@@ -89,7 +89,7 @@ Note: <br/>for ATAC-seq data, we recommend AIAP for peak calling,<br/>for CUT&Ta
 # run DBR analysis
 singularity exec <path-2-singularity-image> bash /cuttag_atac/Resource/pipe_code/DBR_analysis.sh keyword1 keyword2 cpm_value q_value log2FC_value
 ```
-For example, after running Tn5DP: <br/>a) create a folder for DBR analysis `mkdir /home/dbr_analysis` <br/> b) copy all `step4.1*` files to /home/dbr_analysis <br/>c) Prepare read bed files (step3.3*open.bed in ATAC-seq and step3.1*.extended.bed in CUT&Tag-seq) <br/> d) find the keywords for 2 conditions. Let's assume the keywords for two groups will be *d0* and *d2* <br/> e) choose CPM_value, q-value, and Log2FC_value. Let's assume you deem them as 1, 0.05, 1.5
+For example, after running Tn5DP: <br/>a) create a folder for DBR analysis `mkdir /home/dbr_analysis` <br/> b) copy all `step4.1*` files to /home/dbr_analysis <br/>c) Prepare read bed files (step3.3*open.bed in ATAC-seq and step3.1*.extended.bed in CUT&Tag-seq) <br/> d) find the keywords for 2 conditions. Let's assume the keywords for two groups will be `d0` and `d2` <br/> e) choose CPM_value, q-value, and Log2FC_value. Let's assume you deem them as `1, 0.05, 1.5`
 
 Then you need to:
 1. `cd /home/dbr_analysis`
