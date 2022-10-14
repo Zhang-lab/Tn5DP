@@ -77,6 +77,7 @@ There should be 9 files in total, and the contents are listed below.
 | *step3.3_rmbl_${name}.open.bed* | bed file after quality filtering on aligned bam file and signal shifting, this is the input for **MACS2** |
 | *step4.1_peakcalling_${software}_${name}_peaks.narrowPeak* | macs2 output, bed file that records peaks called by the software |
 
+<br />
 
 **2.2 CUT&Tag-seq output**
 
@@ -95,6 +96,56 @@ There should be 11 files in total, and the contents are listed below.
 | *step3.2_rmbl_${name}.bedGraph* | bedGraph file aftering quality filtering and blacklist removal, this is the input for **SEACR** |
 | *step3.2_rmbl_${name}.bigwig* | full signal for visualization purpose |
 | *step4.1_peakcalling_${software}_${name}.bed* | bed file that records peaks called by the software |
+
+<br />
+
+## 3. Data processing details
+
+### Step1, Pre-alignment
+
+**1.1 Trimming by cutadapt**
+
+Tool: cutadapt v3.5<br/>
+Input: fastq file<br/>
+Output: trimmed fastq file<br/>
+```
+ $cutadapt -a $adapter_1 -A $adapter_2 --quality-cutoff=15,10 --minimum-length=25 -o 'step1.1_trimed_'$name'_1.fastq' -p 'step1.1_trimed_'$name'_2.fastq' $read1 $read2 >'step1.1_'$name'_cutadapt_PE.trimlog'
+```
+
+**1.2 Fastq file quality assessment**
+
+Tool: FastQC v0.11.7<br/>
+Input: trimmed fastq file<br/>
+Output: fastqc results
+```
+[ -f $(ls 'step1.1_trimed_'$name*'.fastq' | head -1) ] && $fastqc -t $threads 'step1.1_trimed_'$name*'.fastq' -o .
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
