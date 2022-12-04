@@ -24,7 +24,7 @@ For any question, please contact siyuancheng@wustl.edu :point_left:
 Tn5DP image has to be run with **Singularity version3+**, you could follow this instruction if you haven`t install Singularity3. <br/>Please [click here](https://github.com/sylabs/singularity/blob/main/INSTALL.md)<br/>(You will need sudo permission to properlly install and configure it, but you can run it without sudo after installation:smiley:)
 
 ### Test ATAC-seq data:
-There are one paired-end mm10 data with 0.25M reads for test purpose, they can be downloaded by:
+There is one paired-end mm10 data with 0.25M reads for test purpose, they can be downloaded by:
 ```
 wget http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/sample_data/atac-seq/mm10_1.fastq.gz
 wget http://regmedsrv1.wustl.edu/Public_SPACE/ryan/Public_html/singularity_ac/sample_data/atac-seq/mm10_2.fastq.gz
